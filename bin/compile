@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mkdir $1/tmp
+wget -q https://chef2nite.sfo3.digitaloceanspaces.com/chef-images.zip -O $1/tmp/chef-images.zip
+wget -q https://chef2nite.sfo3.digitaloceanspaces.com/food-images.zip -O $1/tmp/food-images.zip
+
+cd $1/tmp
+unzip chef-images.zip
+unzip food-images.zip
+
+echo "-----> Downloaded chefs and food images"
